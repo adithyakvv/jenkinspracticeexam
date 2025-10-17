@@ -9,7 +9,7 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 // Change directory to our React project
-                dir('cricket-react') {
+                dir('crickert-react') {
                     // Install dependencies and create the production build
                     bat 'npm install'
                     bat 'npm run build'
