@@ -1,0 +1,205 @@
+/* Import a clean, modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- General Body and Container Styles --- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem 2.5rem;
+}
+
+/* --- Header --- */
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    color: #1a73e8;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* --- Form, Fetch, and Table Sections --- */
+
+.form-container,
+.fetch-container,
+.table-container {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background: #fdfdff;
+    border: 1px solid #e8e8f0;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #1a73e8;
+    display: inline-block;
+}
+
+/* --- Input Fields and Buttons --- */
+
+form, .fetch-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 1 1 150px; /* Allow inputs to grow and shrink */
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button[type="submit"], .fetch-controls button {
+    background-color: #1a73e8;
+}
+
+button[type="submit"]:hover, .fetch-controls button:hover {
+    background-color: #155ab3;
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* --- Fetched Team Card --- */
+
+.fetched-team-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e9f5ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fetched-team-card h3 {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 1.2rem;
+}
+
+.fetched-team-card p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Message / Notification --- */
+
+.message {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.message { /* General styling for both success and error */
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* --- Data Table --- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table thead th {
+    background-color: #f8f9fa;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+table td button:first-of-type { /* Edit Button */
+    background-color: #ffc107;
+    color: #212529;
+}
+
+table td button:first-of-type:hover {
+    background-color: #e0a800;
+}
+
+table td button:last-of-type { /* Delete Button */
+    background-color: #dc3545;
+    color: white;
+}
+
+table td button:last-of-type:hover {
+    background-color: #c82333;
+}
