@@ -1,5 +1,5 @@
 const config = {
-    url: "http://localhost:2001/cricketteam-api"
+    url: "http://localhost:2030/cricketteam-api"
 };
 
 export default config;
